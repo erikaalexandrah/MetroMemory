@@ -8,7 +8,7 @@
 let playerName = "";
 let countdown = 180;
 let pairsFound = 0;
-let cards = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg"];
+let cards = ["pictures/1.jpg", "pictures/2.jpg", "pictures/3.jpg", "pictures/4.jpg", "pictures/5.jpg", "pictures/6.jpg", "pictures/7.jpg", "pictures/8.jpg"];
 cards = cards.concat(cards);
 
 
@@ -75,7 +75,7 @@ function fillCards(array) {
     // Se itera sobre las tarjetas en el board 
     for (let i = 0; i < imgElements.length; i++) {
         imgElements[i].addEventListener("click", function() {
-            if (this.src.includes("back.jpg") && !this.classList.contains("flipped") && !isFlipping) {
+            if (this.src.includes("pictures/back.jpg") && !this.classList.contains("flipped") && !isFlipping) {
                 let index = Array.from(imgElements).indexOf(this);
                 this.src = cards[index];
                 this.classList.add("flipped");
@@ -89,8 +89,8 @@ function fillCards(array) {
                     
                     if (firstCard.src !== secondCard.src) {
                         setTimeout(function() {
-                            firstCard.src = "back.jpg";
-                            secondCard.src = "back.jpg";
+                            firstCard.src = "pictures/back.jpg";
+                            secondCard.src = "pictures/back.jpg";
                             firstCard.classList.remove("flipped");
                             secondCard.classList.remove("flipped");
                             firstCard = null;
@@ -152,7 +152,7 @@ function resetGame() {
     document.getElementById("countdown").textContent = countdown;
     for (let i = 0; i < imgElements.length; i++) {
         // Tapamos nuevamente las tarjetas
-        imgElements[i].src = "back.jpg";
+        imgElements[i].src = "pictures/back.jpg";
         imgElements[i].classList.remove("flipped");
     }
     shuffle(cards);
