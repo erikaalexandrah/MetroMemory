@@ -135,6 +135,7 @@ function startTimer() {
         if (countdown === 0) { 
             alert("Se acabó el tiempo⏳! \n ¡Tienes que ser un poco más rápido la próxima vez 🏃‍♂️!");
             clearInterval(timerInterval);
+            resetGame();
         }
     }, 1000); // 1000 equivale a 1 segundo. 
 }
