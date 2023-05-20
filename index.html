@@ -1,0 +1,117 @@
+
+ <!-- 
+    Erika Alexandra Hernández Zurilla
+    20 de Mayo 2023
+    Microproyecto Sistemas de Información
+    MetroMemory
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MetroMemory 🧠</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@900&family=Lilita+One&family=Montserrat&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles.css">
+   
+</head>
+
+<body>
+    
+    <div class="container">
+
+    <!-- POPUP DE INICIO -->
+    <dialog id="modal">
+        <h2 id = "welcomeMessage">BIENVENIDO</h2>
+        <h3> Aquí te dejo las instrucciones para comenzar a jugar: </h3>
+        <p> 1. Cuentas con 3 minutos para completar las parejas de tarjetas. </p>
+        <p> 2. Cuando completes el juego obtendrás una puntación. </p>
+        <p> 3. Gana el mas rápido. </p>
+        <p>¿LISTO?</p>
+        <p>🪄 </p>
+        <h4> Cuentanos ¿Cómo quieres llamarte? </h4>
+        <form id="myForm" action="">
+            <input type="text" id="nombreInput" placeholder="Nombre">
+            <button id="buttonCloseModal">Ingresar</button>
+        </form>
+    </dialog>
+    
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">METROMEMORY</a>
+        </div>
+        <div class="navLink">
+            <a href="#timerDiv" id="navLink1"> Jugar 🎮</a>
+        </div>
+        <div class="navLink">
+            <a href="#tableTitle" id="navLink2"> Top 10 Ranking ⭐</a>
+        </div>
+    </nav>
+
+    
+     <!-- BARRA DE TIEMPO -->
+    <div id="timerDiv">
+        <div><p id="timer">TIEMPO RESTANTE <span id="countdown"> : 180 </span>  </p></div>
+        <div><img src="clock.gif" alt="clock" style="width: 7rem; height: 7em;"></div>
+    </div>
+
+     <!-- TABLERO DE CARTAS -->
+    <div class = "board">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+        <img src="back.jpg" alt="imagen">
+    </div>
+
+     <!-- BARRA DE REINICIAR JUEGO -->
+    <div class="restart">
+        <p> ¿Quieres volver a comenzar?</p>
+        <button id="restartButton">Reiniciar</button>
+    </div>
+
+     <!-- TABLA DE PUNTUACIÓN TOP 10 -->
+    <div class="table">
+        <h1 id = "tableTitle"> TOP 10 MEJORES JUGADORES 🥇 </h1>
+
+        <table class="scoreTable">
+            <thead id = "tableAttributes">
+              <tr>
+                <th>POSICION</th>
+                <th>NOMBRE</th>
+                <th>PUNTUACION</th>
+              </tr>
+            </thead>
+            <tbody>
+             
+            </tbody>
+          </table>
+    </div >
+ 
+    <!-- BARRA DE CIERRE -->
+    <div class="foot">
+        <p>Realizado por: Erika Hernández</p>
+    </div> 
+
+     <!-- LLAMADO DE JS -->
+    <script src="scripts.js"></script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+  /* 
+      Erika Alexandra Hernández Zurilla
+      20 de Mayo 2023
+      Microproyecto Sistemas de Información
+      MetroMemory
+   */
+
+
+/* CAMBIOS MACROS */
+  body {
+      margin: 0;
+    }
+  
+  /* POP UP PRINCIPAL */
+  dialog {  /* Ventana */
+    background-color: #242321;
+    font-family: 'Montserrat', sans-serif;
+    color: #ddd;
+  }
+  
+  #welcomeMessage { /* Mensaje bienvenida */
+    font-family: 'Lexend', sans-serif;
+    font-size: 300%;
+  }
+  
+  /* NAVBAR */
+  .navbar { /* Navbar completo */
+    background-color: #333;
+    font-size: 200%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 1%;
+    border: 2px solid black;
+  }
+
+  .navbar div{ /* Separación de los contenedores dentro del navbar */
+    margin-left: 3%; 
+  }
+  
+  .logo a { /* Anchor Tag MetroMemory */
+    color: #fff;
+    font-family: 'Lexend', sans-serif;
+    text-decoration: none;
+  }
+  
+  .navLink a {  /* Anchor Tags juego & top10Ranking */
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+  }
+  
+  /* BARRA DE TIEMPO */
+  #timerDiv { /* Contenedor principal */
+    display: flex;
+    justify-content: center;
+    margin-left: 15%;
+    background-color: #fff;
+  }
+
+  #timer { /* Contenedor del texto */
+    display: flex;
+    justify-content: center;
+    font-family: 'Lexend', sans-serif;
+    font-size: 250%;
+  }
+  
+  /* CONTENEDOR JUEGO */
+  .board { /* Tablero */
+    padding-left: 10%;
+    padding-top: 1%;
+    background-color: rgb(201, 237, 233);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
+  }
+  
+  .board img { /* Tarjetas de memoria ocultas */
+    width: 60%;
+    margin-bottom: 3%;
+    border: 3px solid white;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+  
+  .flipped { /* Tarjeta volteada */
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(180deg);
+  }
+
+  /* BARRA REINICIO JUEGO */
+  .restart{ /* Contenedor de la barra */
+    margin-top: 1%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    background-color: #c28c26;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+  color: #fff;
+  }
+
+  #restartButton{ /* Botón */
+    margin-left: 2%;
+    font-family: 'Lexend', sans-serif;
+  }
+  
+  /* TABLA PUNTUACIONES */
+  h1{ /* Título principal */
+    font-family: 'Lexend', sans-serif;
+    font-size: 200%;
+    text-align: center;
+  }
+  
+  .scoreTable { /* Tabla propiamente dicha  */
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+  }
+
+  .scoreTable th,
+  .scoreTable td { /* Casillas de la tabla */
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .scoreTable th {  /* Atributos de la tabla */
+    background-color: #76104c;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    border: 1px solid black;
+  }
+  
+  .scoreTable td {  /* Instancias de la tabla */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border: 1px solid black;
+  }
+  
+  .scoreTable tr:hover { /* Mouse al pasar la tabla */
+    background-color: #f5f5f5;
+  }
+  
+  /* FOOTER */
+  
+  .foot { /* Créditos */
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(250, 250, 250);
+    background-color: rgb(14, 8, 90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5%;
+    border-top: 2px solid black;
+  }
+  
+  /* MEDIAQUERY para tamaño de ventana menor a 900x1200 - RESPONSIVE TABLET FORMAT */
+  @media (max-width: 900px) and (max-height: 1200px) {
+    .navbar {
+      font-size: 120%; /* Modifica el tamaño de fuente de la barra de navegación */
+      
+    }
+    #timer { 
+        font-size: 220%;
+      }
+
+      #timerDiv img {
+        width: 5rem; 
+        height: 5rem;
+    }   
+    
+    .scoreTable {
+        margin-top: 20px;
+        margin-right: 5%;
+        margin-left: 4%;
+        padding-left: 10%;
+        width: 70%;
+      }
+}
+
+  /* MEDIAQUERY para tamaño de ventana menor a 600x700 - RESPONSIVE PHONE FORMAT */
+  @media (max-width: 600px) and (max-height: 700px) {
+    .navbar {
+      font-size: 100%; /* Modifica el tamaño de fuente de la barra de navegación */ 
+    }
+
+    #timer {
+      font-size: 190%;   
+      }
+
+    #timerDiv img {
+      width: 2rem; 
+      height: 2em;
+    }
+    
+    .scoreTable {
+      margin-top: 20px;
+      margin-right: 5%;
+      margin-left: 5%;
+      padding-left: 10%;
+      width: 70%;
+      }
+}
