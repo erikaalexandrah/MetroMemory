@@ -96,7 +96,7 @@ function fillCards(array) {
                             firstCard = null;
                             secondCard = null;
                             isFlipping = false;
-                        }, 500);
+                        }, 1000);
                     } else {
                         pairsFound++;
                         if (pairsFound === cards.length / 2) {
